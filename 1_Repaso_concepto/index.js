@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 let imagen = document.querySelector('.imagen')
 let boton1 = document.querySelector('.boton1')
 let boton2 = document.querySelector('.boton2')
@@ -43,14 +42,4 @@ function imagenclick6() {
     imagen.style.removeProperty('transform')
     boton3.addEventListener('click', imagenclick5)
     boton3.removeEventListener('click', imagenclick6)
-=======
-let imagen = document.querySelector('.imagen')
-let boton1 = document.querySelector('.boton1')
-let boton2 = document.querySelector('.boton2')
-let boton3 = document.querySelector('.boton3')
-
-boton1.addEventListener('click', imagenclick1) 
-function imagenclick1() {
-    imagen.style.filter = 'grayscale(100%)'
->>>>>>> cdd11fea381584a75cf36693917d7ab0b2c015e8
 }
