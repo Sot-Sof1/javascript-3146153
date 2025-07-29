@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box
@@ -9,7 +9,7 @@
     src: url(../Poppins-SemiBold.ttf);
 }
 
-section{
+section {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -18,7 +18,7 @@ section{
     background-color: black;
 }
 
-.contenedor{
+.contenedor {
     width: 100%;
     height: 100vh;
     display: flex;
@@ -28,26 +28,26 @@ section{
     gap: 3rem;
 }
 
-.contenedor-imagen{
+.contenedor-imagen {
     width: 70%;
     height: 30rem;
-    
+
 }
 
-img{
+img {
     width: 100%;
     height: 30rem;
     border-radius: 3rem;
 }
 
-.botones{
+.botones {
     width: 70%;
     display: flex;
     justify-content: center;
     gap: 5rem;
 }
 
-button{
+button {
     width: 20%;
     color: white;
     background-color: #1e469c;
@@ -60,7 +60,7 @@ button{
     font-family: Poppins;
 }
 
-button:hover{
+button:hover {
     background-color: #07196b;
     transition: 0.5s;
-}  
+}
