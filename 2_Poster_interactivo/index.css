@@ -1,56 +1,102 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.pantalla{
+.pantalla {
     position: relative;
     width: 750px;
     height: 500px;
     margin: auto;
 }
 
-.pantalla .fondo{
+.pantalla .fondo {
     width: 100%;
 }
 
-.bloque1{
+.bloque1 {
     position: absolute;
     top: 45%;
     left: 18%;
 }
 
-.bloque2{
+.bloque2 {
     position: absolute;
     top: 30%;
     left: 50%;
 }
 
-.moneda1{
+.moneda1 {
     position: absolute;
     top: 34%;
     left: 23%;
     cursor: pointer;
 }
 
-.moneda2{
+.moneda2 {
     position: absolute;
     top: 34%;
     left: 32%;
     cursor: pointer;
 }
 
-.moneda3{
+.moneda3 {
     position: absolute;
     top: 51%;
     left: 87%;
     cursor: pointer;
 }
 
-.corazon{
+.corazon {
     position: absolute;
     top: 18%;
     left: 55.5%;
     cursor: pointer;
 }
+
+/* clase para asignar animación */
+
+.saltar {
+    animation: salto 1s ease forwards;
+}
+
+/* Animaciones de moneda desaparece */
+
+@keyframes salto {
+    0% {transform: translateY(0); opacity: 1;}
+    30% {transform: translateY(-60px);}
+    100% {transform: translateY(0); opacity: 0;}
+}
+
+/* Contador monedas y corazones */
+
+.hud {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 18px;
+    color: white;
+    z-index: 1000;
+}
+
+.hud-item {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.hud-item img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+
