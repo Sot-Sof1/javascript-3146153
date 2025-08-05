@@ -19,12 +19,14 @@
     position: absolute;
     top: 45%;
     left: 18%;
+    animation: plataforma 2s ease-in-out infinite;
 }
 
 .bloque2 {
     position: absolute;
     top: 30%;
     left: 50%;
+    animation: plataforma2 1.8s ease-in-out infinite;
 }
 
 .moneda1 {
@@ -64,9 +66,33 @@
 /* Animaciones de moneda desaparece */
 
 @keyframes salto {
-    0% {transform: translateY(0); opacity: 1;}
-    30% {transform: translateY(-60px);}
-    100% {transform: translateY(0); opacity: 0;}
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    30% {
+        transform: translateY(-60px) scaleX(-1);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+/* Animacion de plataformas */
+
+@keyframes plataforma {
+    0%{transform:  translateY(0);}
+    50%{transform:  translateY(5px);}
+    100%{transform:  translateY(0);}
+}
+
+@keyframes plataforma2 {
+    0%{transform:  translateY(0);}
+    50%{transform:  translateY(5px);}
+    100%{transform:  translateY(0);}
 }
 
 /* Contador monedas y corazones */
@@ -98,5 +124,3 @@
     height: 24px;
     margin-right: 8px;
 }
-
-
