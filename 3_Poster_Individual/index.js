@@ -1,5 +1,5 @@
 let inicio = document.querySelector('.contenedor');
-let texto = document.querySelector('.texto');
+let texto = document.querySelector ('.texto');
 let dino = document.querySelector('.dino');
 let suelo = document.querySelector('.suelo');
 let marcador = document.querySelector('.marcador');
@@ -28,7 +28,9 @@ function funcioninicio() {
       suelo.style.animationPlayState = 'paused';
       cactus.style.animationPlayState = 'paused';
       dino.classList.remove('dino-corriendo');
-      dino.classList.add('dino-estrellado')
+      dino.classList.remove('dino-salto');
+      dino.classList.add('dino-estrellado');
+      marcador.style.display = 'none';
       final.style.display = 'block';
     }
 
