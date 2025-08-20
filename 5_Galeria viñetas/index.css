@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #584040;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor {
+    width: 920px;
+    height: 280px;
+    position: relative;
+    background: linear-gradient(#B7D6C7, #FFE2D1);
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.texto {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    position: absolute;
+    top: 37%;
+    left: 26%;
+    color: #D48872;
+    animation: textoanimation 0.7s infinite;
+}
+
+.dino {
+    width: 84px;
+    height: 84px;
+    position: absolute;
+    bottom: 22px;
+    left: 42px;
+    background-image: url(./assets/dino.png);
+    background-repeat: no-repeat;
+    background-size: 336px 84px;
+    background-position-x: 0px;
+}
+
+.dino-corriendo {
+    animation: correr 0.5s steps(2) infinite;
+}
+
+.dino-saltando {
+    animation: saltar 0.5s ease-out forwards;
+}
+
+.dino-estrellado {
+    background-position-x: -252px;
+}
+
+.dino-salto{
+    animation: saltar 0.8s ease-in-out forwards;
+}
+
+.marcador {
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    color: #D48872;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+.suelo {
+    width: 200%;
+    height: 42px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url(./assets/suelo.png);
+    background-size: 50% 42px;
+}
+
+.suelo-mover {
+    animation: suelomover 3s linear infinite;
+}
+
+.cactus {
+    width: 46px;
+    height: 96px;
+    position: absolute;
+    bottom: 16px;
+    left: 100%;
+    background-image: url(./assets/cactus1.png);
+}
+
+
+
+.cactus-mover{
+    animation: cactus 3.5s linear infinite;
+}
+
+
+
+.nube {
+    width: 92px;
+    height: 26px;
+    position: absolute;
+    top: 37%;
+    left: 25%;
+    background-image: url(./assets/nube.png);
+    background-size: 92px 26px;
+}
+
+.nube2 {
+    width: 92px;
+    height: 26px;
+    position: absolute;
+    top: 19%;
+    left: 60%;
+    background-image: url(./assets/nube.png);
+    background-size: 92px 26px;
+}
+
+.game-over {
+
+    position: absolute;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: #D48872;
+    font-weight: bold;
+    top: 45%;
+    left: 25%;
+}
+
+@keyframes suelomover {
+    0% {
+        bottom: 0;
+        left: 0;
+    }
+
+    100% {
+        bottom: 0;
+        left: -100%;
+    }
+
+}
+
+@keyframes cactus {
+    100% {
+        bottom: 0;
+        left: -100%;
+    }
+}
+
+@keyframes correr {
+    from {
+        background-position-x: -84px;
+    }
+
+    to {
+        background-position-x: -252px;
+    }
+}
+
+@keyframes saltar {
+
+     0% {
+        transform: translateY(0);
+       
+    }
+
+    50% {
+        transform: translateY(-180px);
+    }
+
+    100% {
+        transform: translateY(0);
+        
+    }
+}
+
+@keyframes textoanimation {
+    50% {
+        opacity: 0.3;
+    }
+}
