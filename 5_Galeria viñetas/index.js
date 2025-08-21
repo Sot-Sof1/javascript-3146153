@@ -8,12 +8,13 @@ let final = document.querySelector('.game-over');
 let audioGameOver = document.querySelector('.audio-game-over');
 let audioMarcador = document.querySelector('.audio-marcador');
 let audio = document.querySelector('.audio-salto');
+let botonAmbiente = document.querySelector('.ambiente');
+let audioAmbiente = document.querySelector('.audio-ambiente');
 let puntuacion = 0;
 
 final.style.display = 'none';
 
-
-inicio.addEventListener('click', funcioninicio);
+texto.addEventListener('click', funcioninicio);
 function funcioninicio() {
   suelo.classList.add('suelo-mover')
   cactus.classList.add('cactus-mover');
@@ -54,7 +55,6 @@ function funcioninicio() {
 
 }
 
-
 let intervalo = setInterval(function () {
 
   const dinorect = dino.getBoundingClientRect();
@@ -74,9 +74,42 @@ let intervalo = setInterval(function () {
     clearInterval(intervalo);
   }
 
-
-
 }, 10);
+
+botonAmbiente.addEventListener('click', presionarboton);
+function presionarboton() {
+  if (audioAmbiente.paused) {
+    audioAmbiente.play();
+    botonAmbiente.innerHTML = 'Pause';
+  } else {
+    audioAmbiente.pause();
+    botonAmbiente.innerHTML = 'Play';
+  }
+}
+
+// Cambiar escenas
+
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+const escena1 = document.querySelector('.escena-1');
+const escena2 = document.querySelector('.escena-2');
+const escena3 = document.querySelector('.escena-3');
+let i = 1
+
+next.addEventListener('click', function() {
+  if(i === 1){
+    escena1.classList.add('d-none')
+    escena2.classList.remove('d-none')
+    i++
+
+  }else if(i === 2){
+    escena2.classList.add('d-none')
+    escena3.classList.remove('d-none')
+    i++
+  }
+
+} )
+
 
 
 

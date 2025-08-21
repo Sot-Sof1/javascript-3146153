@@ -8,8 +8,14 @@ body {
     height: 100vh;
     background-color: #584040;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
+}
+
+.d-none {
+    display: none;
 }
 
 .contenedor {
@@ -18,7 +24,6 @@ body {
     position: relative;
     background: linear-gradient(#B7D6C7, #FFE2D1);
     overflow: hidden;
-    cursor: pointer;
 }
 
 .texto {
@@ -29,6 +34,7 @@ body {
     left: 26%;
     color: #D48872;
     animation: textoanimation 0.7s infinite;
+    cursor: pointer;
 }
 
 .dino {
@@ -95,13 +101,9 @@ body {
     background-image: url(./assets/cactus1.png);
 }
 
-
-
 .cactus-mover{
     animation: cactus 3.5s linear infinite;
 }
-
-
 
 .nube {
     width: 92px;
@@ -130,7 +132,7 @@ body {
     font-family: 'Courier New', Courier, monospace;
     color: #D48872;
     font-weight: bold;
-    top: 45%;
+    top: 43%;
     left: 25%;
 }
 
@@ -185,4 +187,27 @@ body {
     50% {
         opacity: 0.3;
     }
+}
+
+.ambiente{
+    width: 80px;
+    height: 40px;
+    background-color: #D48872;
+    border: none;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.filter-style2 {
+    filter: saturate(5)
+}
+
+.filter-style3 {
+    filter: invert()
 }
